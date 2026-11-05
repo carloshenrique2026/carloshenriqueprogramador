@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://carloshenriqueprogramador.com.br/sitemap.xml
