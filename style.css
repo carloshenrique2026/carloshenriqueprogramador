@@ -156,42 +156,53 @@ section {
 .chatbot-promo {
     min-width: 0;
     padding: var(--spacing-lg);
-    background-color: var(--bg-white);
-    border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-base),
+                box-shadow var(--transition-base);
 }
 
 .pricing-card {
-    display: flex;
-    flex-direction: column;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
     border-top: 4px solid var(--primary-light);
+}
+
+.pricing-card:hover,
+.chatbot-promo:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
 }
 
 .pricing-card.featured {
     border: 2px solid var(--accent-color);
+    box-shadow: var(--shadow-xl);
 }
 
 .pricing-header h3 {
     color: var(--primary-color);
-    font-size: 1.15rem;
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-xs);
 }
 
 .pricing-header p {
     min-height: 3rem;
-    margin: var(--spacing-xs) 0;
     color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
 }
 
 .pricing-price {
-    margin: var(--spacing-md) 0;
     color: var(--primary-color);
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: var(--spacing-md) 0;
 }
 
 .pricing-price span {
     font-size: 1rem;
+    font-weight: 500;
 }
 
 .pricing-body {
@@ -220,23 +231,29 @@ section {
 
 .pricing-body .btn {
     width: 100%;
-    padding: 0.8rem 0.6rem;
+    margin-top: auto;
+    padding: 0.85rem 0.6rem;
 }
 
 .pricing-badge {
     align-self: flex-start;
     margin: calc(-1 * var(--spacing-sm)) 0 var(--spacing-sm);
-    color: var(--accent-dark);
+    padding: 0.35rem 0.75rem;
+    color: var(--primary-dark);
+    background-color: var(--accent-light);
+    border-radius: var(--radius-full);
     font-size: 0.75rem;
     font-weight: 700;
 }
 
+/* Chatbot Promo */
 .chatbot-promo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     color: white;
-    background: linear-gradient(155deg, var(--primary-color), var(--primary-dark));
+    background: linear-gradient(
+        155deg,
+        var(--primary-color),
+        var(--primary-dark)
+    );
     border: 0;
 }
 
@@ -244,6 +261,8 @@ section {
     color: var(--accent-light);
     font-size: 0.75rem;
     font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .chatbot-promo-icon {
@@ -288,12 +307,16 @@ section {
 .chatbot-promo-button {
     width: 100%;
     margin-top: auto;
-    padding: 0.8rem 0.6rem;
+    padding: 0.85rem 0.6rem;
     color: var(--primary-dark);
     background-color: var(--accent-light);
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    text-align: center;
 }
 
 .chatbot-promo-button:hover {
+    color: var(--primary-color);
     background-color: white;
 }
 
@@ -749,9 +772,9 @@ section {
 .project-links a {
     display: inline-block;
     padding: 8px 14px;
-    border: 1px solid #13c107;
+    border: 1px solid #ffd700;
     border-radius: 6px;
-    color: #fff;
+    color: #ffd700;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
@@ -759,8 +782,8 @@ section {
 }
 
 .project-links a:hover {
-    background: #13c107;
-    color: #000;
+    border-color: #13c107;
+    color: #13c107;
 }
 
 /* Services Section */
